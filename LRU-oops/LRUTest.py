@@ -33,7 +33,7 @@ def main():
     checks.put(4,13) 
     assert checks.get_cache() ==  {1:10,2:11,3:14,4:13}
     print("All test cases passed")
-    print("hi")
+    # print("hi")
 
 
 
