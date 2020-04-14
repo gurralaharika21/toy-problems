@@ -20,11 +20,11 @@ class LRUCache:
         try:
             value = self.cache.pop(key)   
             self.cache[key] = value
-            # val = value
-            # print(value)
+            val = value
+            print(value)
             return value
         except KeyError:
-            # print(-1)
+            print(-1)
             return -1
 
 
@@ -42,7 +42,7 @@ if __name__ == "__main__":
     dict.put(5,14)
     
     dict.get_cache()
-    # dict.get(7)
+    dict.get(7)
 
     #   self.key = key
     #   self.value = value
