@@ -23,6 +23,7 @@ def main():
     checks = LRUCache(4)
 
     checks.put(1,10)
+    
     checks.put(2,11)
     checks.put(3,12)
     assert checks.get_cache() == {1:10,2:11,3:12}
@@ -32,6 +33,7 @@ def main():
     checks.put(4,13) 
     assert checks.get_cache() ==  {1:10,2:11,3:14,4:13}
     print("All test cases passed")
+    print("hi")
 
 
 
