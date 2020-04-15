@@ -12,8 +12,10 @@ class LRUCache:
         except KeyError:
             if len(self.cache) >= self.capacity:
                 self.cache.popitem(last=False)
+                # //first in first out
         self.cache[key] = value   
     
+
 
 
     def get(self,key:int): 
