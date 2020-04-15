@@ -12,15 +12,17 @@ class LRUCache:
         except KeyError:
             if len(self.cache) >= self.capacity:
                 self.cache.popitem(last=False)
+                # //first in first out
         self.cache[key] = value   
     
+
 
 
     def get(self,key:int): 
         try:
             value = self.cache.pop(key)   
             self.cache[key] = value
-            # val = value
+            val = value
             # print(value)
             return value
         except KeyError:
@@ -30,18 +32,22 @@ class LRUCache:
 
    
     def get_cache(self):
-        print(self.cache)     
+        return self.cache
+        # print(self.cache)     
 
 
-if __name__ == "__main__":
-    dict = LRUCache(4)
-    dict.put(1,10)
-    dict.put(2,11)
-    dict.put(3,12)
-    dict.put(4,13)
-    dict.put(5,14)
-    
-    dict.get_cache()
+# if __name__ == "__main__":
+#     dict = LRUCache(4)
+#     dict.put(1,10)
+#     dict.put(2,11)
+#     dict.put(3,12)
+#     dict.put(3,13)
+#     dict.put(4,13)
+#     dict.get_cache()
+
+
+
+
     # dict.get(7)
 
     #   self.key = key
